@@ -66,6 +66,10 @@
 
 /* Order page */
 
+.overview{
+    padding-left: 40px;
+    padding-right: 30px;
+}
 .pizza-image img{
     width: 100%;
 }
