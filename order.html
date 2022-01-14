@@ -23,11 +23,19 @@
                 </div>
 
                 <div class="order-form">
-                    <div class="mb-3">
-                        <label for="form-input" class="form-label">Enter your name</label>
-                        <input type="text" class="form-control" id="full-name" placeholder="name">
+                    <div class="row first-row">
+                        <div class="col mb-3">
+                            <label for="form-input" class="form-label">Enter your name</label>
+                            <input type="text" class="form-control" id="full-name" placeholder="name">
+                        </div>
+                        <div class="col email-input">
+                            <label for="form-input" class="form-label">Enter your Email(optional)</label>
+                            <input type="email" class="form-control" id="email" placeholder="Email">
+                        </div>
+                        
                     </div>
-                    <div class="size-selection">
+                   <div class="row">
+                    <div class="col size-selection">
                         <p>Choose Pizza size you want</p>
                         <select class="form-select" aria-label="Default select example">
                             <option selected>Choose pizza size</option>
@@ -36,7 +44,7 @@
                             <option value="3">Small @600</option>
                         </select>
                     </div>
-                    <div class="crust">
+                    <div class="col crust">
                         <p>Choose preferred crust</p>
                         <select class="form-select" aria-label="Default select example">
                             <option selected>Choose crust</option>
@@ -45,8 +53,9 @@
                             <option value="3">Glutten free</option>
                         </select>
                     </div>
+                   </div>
                     <div class="toppings">
-                        <p>Select toppings @ ksh50 each</p>
+                        <p>Select toppings @ ksh50 each:</p>
                         <div class="form-check">
                             <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
                             <label class="form-check-label" for="flexCheckDefault">
