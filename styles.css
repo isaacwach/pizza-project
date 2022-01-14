@@ -137,3 +137,9 @@ h2 {
     color: white;
     border: 2px solid blue;
 }
+.output{
+    margin-top: 40px;
+}
+.output h2{
+    color: black;
+}
