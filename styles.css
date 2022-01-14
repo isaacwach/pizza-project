@@ -42,8 +42,8 @@
 
 #btn1 {
     margin-top: 20px;
-    width: 140px;
-    height: 50px;
+    width: 180px;
+    height: 60px;
     background-color: rgb(240, 160, 13);
     font-size: 20px;
     color: white;
@@ -122,6 +122,7 @@ h2 {
     padding-top: 30px;
     display: flex;
     justify-content: space-between;
+    padding-right: 60px;
 }
 
 .crust {
@@ -142,4 +143,14 @@ h2 {
 }
 .output h2{
     color: black;
+}
+#btn2 {
+    margin-top: 20px;
+    width: 200px;
+    height: 50px;
+    background-color: rgb(240, 85, 13);
+    font-size: 20px;
+    color: white;
+    border: 2px solid blue;
+    margin-left: 100px;
 }
