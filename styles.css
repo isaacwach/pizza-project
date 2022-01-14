@@ -67,9 +67,15 @@
 /* Order page */
 
 .overview{
-    padding-left: 40px;
+    padding-left: 70px;
     padding-right: 30px;
 }
 .pizza-image img{
     width: 100%;
+}
+.panel{
+    padding-top: 80px;
+}
+.intro{
+    text-align: center;
 }
