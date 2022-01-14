@@ -41,4 +41,5 @@
 .offers{
     border-top: 2px solid blue;
     border-top-style: ridge;
+    padding-top: 30px;
 }
