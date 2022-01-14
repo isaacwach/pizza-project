@@ -42,4 +42,14 @@
     border-top: 2px solid blue;
     border-top-style: ridge;
     padding-top: 30px;
+    background-image: url(images/background1.jpg);
+    text-align: center;
+    /* height: 500px; */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.control{
+    width: 100%;
+    height: 400px;
 }
