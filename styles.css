@@ -34,3 +34,11 @@
 .paragraph{
     color: rgb(197, 15, 70);
 }
+
+
+/* offers section */
+
+.offers{
+    border-top: 2px solid blue;
+    border-top-style: ridge;
+}
