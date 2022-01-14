@@ -29,7 +29,7 @@
 
 #introduction h1 {
     font-size: 50px;
-    color: rgb(255, 166, 0);
+    color: orangered;
 }
 
 #introduction p {
@@ -37,7 +37,7 @@
 }
 
 .paragraph {
-    color: rgb(197, 15, 70);
+    color: #f5bf10;
 }
 
 #btn1 {
@@ -63,6 +63,10 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
+}
+.offers h1{
+    font-size: 50px;
+    color: orangered;
 }
 
 .control {
@@ -92,7 +96,7 @@
 
 .intro h1,
 h2 {
-    color: rgb(255, 165, 0);
+    color: orangered;
 }
 
 .intro p {
