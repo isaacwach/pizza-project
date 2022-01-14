@@ -20,3 +20,14 @@
     left: 80px;
     border-top-left-radius: 100%;
 }
+#introduction{
+    text-align: center;
+    padding-top: 80px;
+}
+#introduction h1{
+    font-size: 50px;
+    color: rgb(255, 166, 0);
+}
+#introduction p {
+    font-size: 24px;
+}
