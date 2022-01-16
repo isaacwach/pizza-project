@@ -239,4 +239,12 @@ button {
     font-weight: bold;
     margin-top: 50px;
 }
+.output{
+    margin-top: 40px;
+    margin-left: 170px;
+    height: 200px;
+}
+#order-summary{
+    font-size: 24px;
+}
 
