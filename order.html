@@ -5,92 +5,549 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Order</title>
+    <title>ZACS MOZZARELLA PIZZERIA</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-    <div class=" container-fluid overview">
-        <div class="row">
-            <div class="panel col-md-6">
-                <div class="intro">
-                    <h1>WELCOME TO THE BEST PIZZA OUTLET</h1>
-                    <P>Where</P>
-                    <h2>QUALITY IS OUR THIRST</h2>
-                    <!-- <p>Place your order below</p> -->
-                </div>
+    <div class="container-fluid order-header">
+        <h1>ZACS MOZZARELLA PIZZERIA</h1>
+        <h2>Making all Customers Happy</h2>
+        <div class="order-paragraph">
+            <p>Make your order today and have a memorable feeling</p>
+            <p>We offer a variety of tasty and delicious pizzas</p>
+        </div>
+        <h3>Order Now!</h3>
+    </div>
+    <div class="order-menu">
+        <h1>OUR MENU</h1>
+        <div class="row top-row">
+            <div class="col">
+                <div class="card">
+                    <img src="https://images.unsplash.com/photo-1534308983496-4fabb1a015ee?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8c29tZW9uZSUyMGVhdGluZyUyMHBpenphfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
+                        alt="Avatar" style="width:100%">
+                    <div class="container">
+                        <h4><b>Neapolitan Pizza</b></h4>
+                        <p>Once you’ve tasted Neapolitan pizza, you’ll never go back. Then you’ll spend the rest of your
+                            life trying to recreate it at home! </p>
+                        <div class="popup-overlay">
+                            <!--Creates the popup content-->
+                            <div class="popup-content">
+                                <h2>Neapolitan Pizza</h2>
 
-                <div class="order-form">
-                    <div class="row first-row">
-                        <div class="col mb-3">
-                            <label for="form-input" class="form-label">Enter your name</label>
-                            <input type="text" class="form-control" id="full-name" placeholder="name">
+                                <div class="order-form">
+                                    <div class="row first-row">
+                                        <div class="col-md-6 email-input">
+                                            <label for="form-input" class="form-label">Enter number of pizza</label>
+                                            <input type="number" class="form-control" id="pizza-number" placeholder="1"
+                                                min="1">
+                                        </div>
+
+                                    </div>
+                                    <div class="row">
+                                        <div class="col size-selection">
+                                            <p>Choose Pizza size you want</p>
+                                            <select class="form-select" id="pizza-size"
+                                                aria-label="Default select example">
+                                                <option selected>Choose pizza size</option>
+                                                <option id="large" value="1200">Large @ 1200</option>
+                                                <option id="medium" value="1000">Medium @ 1000</option>
+                                                <option id="small" value="600">Small @600</option>
+                                            </select>
+                                        </div>
+                                        <div class="col crust">
+                                            <p>Choose preferred crust</p>
+                                            <select class="form-select" id="pizza-crust"
+                                                aria-label="Default select example">
+                                                <option selected>Choose crust</option>
+                                                <option id="crispy" value="120">Crispy @120</option>
+                                                <option id="stuffed" value="100">Stuffed @100</option>
+                                                <option id="glutten" value="80">Glutten free @80</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="toppings">
+                                        <p>Select toppings @ ksh50 each:</p>
+                                        <div class="toppings-check">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="50" id="sausage">
+                                                <label class="form-check-label" for="flexCheckDefault">
+                                                    Sausage
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="50" id="bacon">
+                                                <label class="form-check-label" for="flexCheckChecked">
+                                                    Mashroom
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="50" id="soft">
+                                                <label class="form-check-label" for="flexCheckChecked">
+                                                    Anchovies
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="50" id="soft">
+                                                <label class="form-check-label" for="flexCheckChecked">
+                                                    Radicchio
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button id="btn6" type="button">Confirm</button>
+                                </div>
+                                <!--popup's close button-->
+                                <button class="close">Close</button>
+                            </div>
                         </div>
-                        <div class="col email-input">
-                            <label for="form-input" class="form-label">Enter your Email(optional)</label>
-                            <input type="email" class="form-control" id="email" placeholder="Email">
-                        </div>
-                        
+                        <!--Content shown when popup is not displayed-->
+
+                        <button class="open">Order</button>
+
                     </div>
-                   <div class="row">
-                    <div class="col size-selection">
-                        <p>Choose Pizza size you want</p>
-                        <select class="form-select" aria-label="Default select example">
-                            <option selected>Choose pizza size</option>
-                            <option value="1">Large @ 1200</option>
-                            <option value="2">Medium @ 1000</option>
-                            <option value="3">Small @600</option>
-                        </select>
-                    </div>
-                    <div class="col crust">
-                        <p>Choose preferred crust</p>
-                        <select class="form-select" aria-label="Default select example">
-                            <option selected>Choose crust</option>
-                            <option value="1">Crispy</option>
-                            <option value="2">Stuffed</option>
-                            <option value="3">Glutten free</option>
-                        </select>
-                    </div>
-                   </div>
-                    <div class="toppings">
-                        <p>Select toppings @ ksh50 each:</p>
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                            <label class="form-check-label" for="flexCheckDefault">
-                                Sausage
-                            </label>
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
-                            <label class="form-check-label" for="flexCheckChecked">
-                                Bacon
-                            </label>
-                        </div>
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked">
-                            <label class="form-check-label" for="flexCheckChecked">
-                                Soft Drink
-                            </label>
-                        </div>
-                    </div>
-                </div>
-                <div>
-                    <button id="btn" type="submit">Place Order</button>
-                    <a href="index.html">
-                        <button id="btn2" type="submit">Back to Homepage</button>
-                    </a>
-                </div>
-                <div class="output">
-                    <h2>Order Summary:</h2>
                 </div>
             </div>
+            <div class="col">
+                <div class="card">
+                    <img src="https://images.unsplash.com/photo-1534308983496-4fabb1a015ee?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8c29tZW9uZSUyMGVhdGluZyUyMHBpenphfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
+                        alt="Avatar" style="width:100%">
+                    <div class="container">
+                        <h4><b>Chicken Macon BBQ</b></h4>
+                        <p>A topping of spicy barbeque sauce, diced chicken, cilantro, peppers, and onion all covered
+                            with
+                            cheese, and baked to bubbly goodness! </p>
+                        <div class="popup-overlay1">
+                            <!--Creates the popup content-->
+                            <div class="popup-content1">
+                                <h2>Chicken Macon BBQ</h2>
 
-            <div class=" pizza-image col-md-6">
-                <img src="images/pizza-image.jpeg" alt="">
+                                <div class="order-form">
+                                    <div class="row first-row">
+                                        <div class="col-md-6 email-input">
+                                            <label for="form-input" class="form-label">Enter number of pizza</label>
+                                            <input type="number" class="form-control" id="pizza-number" placeholder="1"
+                                                min="1">
+                                        </div>
+
+                                    </div>
+                                    <div class="row">
+                                        <div class="col size-selection">
+                                            <p>Choose Pizza size you want</p>
+                                            <select class="form-select" id="pizza-size"
+                                                aria-label="Default select example">
+                                                <option selected>Choose pizza size</option>
+                                                <option id="large" value="1200">Large @ 1200</option>
+                                                <option id="medium" value="1000">Medium @ 1000</option>
+                                                <option id="small" value="600">Small @600</option>
+                                            </select>
+                                        </div>
+                                        <div class="col crust">
+                                            <p>Choose preferred crust</p>
+                                            <select class="form-select" id="pizza-crust"
+                                                aria-label="Default select example">
+                                                <option selected>Choose crust</option>
+                                                <option id="crispy" value="120">Crispy @120</option>
+                                                <option id="stuffed" value="100">Stuffed @100</option>
+                                                <option id="glutten" value="80">Glutten free @80</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="toppings">
+                                        <p>Select toppings @ ksh50 each:</p>
+                                        <div class="toppings-check">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="50" id="sausage">
+                                                <label class="form-check-label" for="flexCheckDefault">
+                                                    Sausage
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="50" id="bacon">
+                                                <label class="form-check-label" for="flexCheckChecked">
+                                                    Mashroom
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="50" id="soft">
+                                                <label class="form-check-label" for="flexCheckChecked">
+                                                    Anchovies
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="50" id="soft">
+                                                <label class="form-check-label" for="flexCheckChecked">
+                                                    Radicchio
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button id="btn6" type="button">Confirm</button>
+                                </div>
+                                <!--popup's close button-->
+                                <button class="close1">Close</button>
+                            </div>
+                        </div>
+                        <!--Content shown when popup is not displayed-->
+
+                        <button class="open1">Order</button>
+
+                    </div>
+                </div>
             </div>
+            <div class="col">
+                <div class="card">
+                    <img src="https://images.unsplash.com/photo-1534308983496-4fabb1a015ee?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8c29tZW9uZSUyMGVhdGluZyUyMHBpenphfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
+                        alt="Avatar" style="width:100%">
+                    <div class="container">
+                        <h4><b>Greek Pizza</b></h4>
+                        <p>This Greek Pizza is amazing! Not only that, but it’s also a simple dish to prepare. You may
+                            look
+                            at the directions for this pizza and wonder why I’ve added all the topping on after baking.
+                        </p>
+                        <div class="popup-overlay2">
+                            <!--Creates the popup content-->
+                            <div class="popup-content2">
+                                <h2>Greek Pizza</h2>
 
+                                <div class="order-form">
+                                    <div class="row first-row">
+                                        <div class="col-md-6 email-input">
+                                            <label for="form-input" class="form-label">Enter number of pizza</label>
+                                            <input type="number" class="form-control" id="pizza-number" placeholder="1"
+                                                min="1">
+                                        </div>
+
+                                    </div>
+                                    <div class="row">
+                                        <div class="col size-selection">
+                                            <p>Choose Pizza size you want</p>
+                                            <select class="form-select" id="pizza-size"
+                                                aria-label="Default select example">
+                                                <option selected>Choose pizza size</option>
+                                                <option id="large" value="1200">Large @ 1200</option>
+                                                <option id="medium" value="1000">Medium @ 1000</option>
+                                                <option id="small" value="600">Small @600</option>
+                                            </select>
+                                        </div>
+                                        <div class="col crust">
+                                            <p>Choose preferred crust</p>
+                                            <select class="form-select" id="pizza-crust"
+                                                aria-label="Default select example">
+                                                <option selected>Choose crust</option>
+                                                <option id="crispy" value="120">Crispy @120</option>
+                                                <option id="stuffed" value="100">Stuffed @100</option>
+                                                <option id="glutten" value="80">Glutten free @80</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="toppings">
+                                        <p>Select toppings @ ksh50 each:</p>
+                                        <div class="toppings-check">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="50" id="sausage">
+                                                <label class="form-check-label" for="flexCheckDefault">
+                                                    Sausage
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="50" id="bacon">
+                                                <label class="form-check-label" for="flexCheckChecked">
+                                                    Mashroom
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="50" id="soft">
+                                                <label class="form-check-label" for="flexCheckChecked">
+                                                    Anchovies
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="50" id="soft">
+                                                <label class="form-check-label" for="flexCheckChecked">
+                                                    Radicchio
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button id="btn6" type="button">Confirm</button>
+                                </div>
+                                <!--popup's close button-->
+                                <button class="close2">Close</button>
+                            </div>
+                        </div>
+                        <!--Content shown when popup is not displayed-->
+
+                        <button class="open2">Order</button>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row bottom-row">
+            <div class="col">
+                <div class="card">
+                    <img src="https://images.unsplash.com/photo-1534308983496-4fabb1a015ee?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8c29tZW9uZSUyMGVhdGluZyUyMHBpenphfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
+                        alt="Avatar" style="width:100%">
+                    <div class="container">
+                        <h4><b>Detroit Pizza</b></h4>
+                        <p>Detroit-style pizza is a rectangular pizza with a thick crust that is crispy and chewy. It is
+                            traditionally topped with tomato sauce and Wisconsin brick cheese</p>
+                        <div class="popup-overlay3">
+                            <!--Creates the popup content-->
+                            <div class="popup-content3">
+                                <h2>Detroit Pizza</h2>
+
+                                <div class="order-form">
+                                    <div class="row first-row">
+                                        <div class="col-md-6 email-input">
+                                            <label for="form-input" class="form-label">Enter number of pizza</label>
+                                            <input type="number" class="form-control" id="pizza-number" placeholder="1"
+                                                min="1">
+                                        </div>
+
+                                    </div>
+                                    <div class="row">
+                                        <div class="col size-selection">
+                                            <p>Choose Pizza size you want</p>
+                                            <select class="form-select" id="pizza-size"
+                                                aria-label="Default select example">
+                                                <option selected>Choose pizza size</option>
+                                                <option id="large" value="1200">Large @ 1200</option>
+                                                <option id="medium" value="1000">Medium @ 1000</option>
+                                                <option id="small" value="600">Small @600</option>
+                                            </select>
+                                        </div>
+                                        <div class="col crust">
+                                            <p>Choose preferred crust</p>
+                                            <select class="form-select" id="pizza-crust"
+                                                aria-label="Default select example">
+                                                <option selected>Choose crust</option>
+                                                <option id="crispy" value="120">Crispy @120</option>
+                                                <option id="stuffed" value="100">Stuffed @100</option>
+                                                <option id="glutten" value="80">Glutten free @80</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="toppings">
+                                        <p>Select toppings @ ksh50 each:</p>
+                                        <div class="toppings-check">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="50" id="sausage">
+                                                <label class="form-check-label" for="flexCheckDefault">
+                                                    Sausage
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="50" id="bacon">
+                                                <label class="form-check-label" for="flexCheckChecked">
+                                                    Mashroom
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="50" id="soft">
+                                                <label class="form-check-label" for="flexCheckChecked">
+                                                    Anchovies
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="50" id="soft">
+                                                <label class="form-check-label" for="flexCheckChecked">
+                                                    Radicchio
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button id="btn6" type="button">Confirm</button>
+                                </div>
+                                <!--popup's close button-->
+                                <button class="close3">Close</button>
+                            </div>
+                        </div>
+                        <!--Content shown when popup is not displayed-->
+
+                        <button class="open3">Order</button>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <img src="https://images.unsplash.com/photo-1534308983496-4fabb1a015ee?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8c29tZW9uZSUyMGVhdGluZyUyMHBpenphfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
+                        alt="Avatar" style="width:100%">
+                    <div class="container">
+                        <h4><b>New York-Style Pizza</b></h4>
+                        <p>New York style pizza is pizza made with a characteristically large hand-tossed thin crust,
+                            often
+                            sold in wide slices to go.</p>
+                        <div class="popup-overlay4">
+                            <!--Creates the popup content-->
+                            <div class="popup-content4">
+                                <h2>New York-Style Pizza</h2>
+
+                                <div class="order-form">
+                                    <div class="row first-row">
+                                        <div class="col-md-6 email-input">
+                                            <label for="form-input" class="form-label">Enter number of pizza</label>
+                                            <input type="number" class="form-control" id="pizza-number" placeholder="1"
+                                                min="1">
+                                        </div>
+
+                                    </div>
+                                    <div class="">
+                                        <div class="col size-selection">
+                                            <p>Choose Pizza size you want</p>
+                                            <select class="form-select" id="pizza-size"
+                                                aria-label="Default select example">
+                                                <option selected>Choose pizza size</option>
+                                                <option id="large" value="1200">Large @ 1200</option>
+                                                <option id="medium" value="1000">Medium @ 1000</option>
+                                                <option id="small" value="600">Small @600</option>
+                                            </select>
+                                        </div>
+                                        <div class="col crust">
+                                            <p>Choose preferred crust</p>
+                                            <select class="form-select" id="pizza-crust"
+                                                aria-label="Default select example">
+                                                <option selected>Choose crust</option>
+                                                <option id="crispy" value="120">Crispy @120</option>
+                                                <option id="stuffed" value="100">Stuffed @100</option>
+                                                <option id="glutten" value="80">Glutten free @80</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="toppings">
+                                        <p>Select toppings @ ksh50 each:</p>
+                                        <div class="toppings-check">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="50" id="sausage">
+                                                <label class="form-check-label" for="flexCheckDefault">
+                                                    Sausage
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="50" id="bacon">
+                                                <label class="form-check-label" for="flexCheckChecked">
+                                                    Mashroom
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="50" id="soft">
+                                                <label class="form-check-label" for="flexCheckChecked">
+                                                    Anchovies
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="50" id="soft">
+                                                <label class="form-check-label" for="flexCheckChecked">
+                                                    Radicchio
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button id="btn6" type="button">Confirm</button>
+                                </div>
+                                <!--popup's close button-->
+                                <button class="close4">Close</button>
+                            </div>
+                        </div>
+                        <!--Content shown when popup is not displayed-->
+
+                        <button class="open4">Order</button>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <img src="https://images.unsplash.com/photo-1534308983496-4fabb1a015ee?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8c29tZW9uZSUyMGVhdGluZyUyMHBpenphfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
+                        alt="Avatar" style="width:100%">
+                    <div class="container">
+                        <h4><b>Chicken Hawaiian</b></h4>
+                        <p>Hawaiian Chicken is like a cross between a sweet and sour chicken and a brown sugar chicken.
+                            It
+                            has a sweet sticky sauce, and delightful chunks of pineapple and peppers, served over white
+                            rice.</p>
+                        <div class="popup-overlay5">
+                            <!--Creates the popup content-->
+                            <div class="popup-content5">
+                                <h2>Chicken Hawaiian</h2>
+
+                                <div class="order-form">
+                                    <div class="row first-row">
+                                        <div class="col-md-6 email-input">
+                                            <label for="form-input" class="form-label">Enter number of pizza</label>
+                                            <input type="number" class="form-control" id="pizza-number" placeholder="1"
+                                                min="1">
+                                        </div>
+
+                                    </div>
+                                    <div class="row">
+                                        <div class="col size-selection">
+                                            <p>Choose Pizza size you want</p>
+                                            <select class="form-select" id="pizza-size"
+                                                aria-label="Default select example">
+                                                <option selected>Choose pizza size</option>
+                                                <option id="large" value="1200">Large @ 1200</option>
+                                                <option id="medium" value="1000">Medium @ 1000</option>
+                                                <option id="small" value="600">Small @600</option>
+                                            </select>
+                                        </div>
+                                        <div class="col crust">
+                                            <p>Choose preferred crust</p>
+                                            <select class="form-select" id="pizza-crust"
+                                                aria-label="Default select example">
+                                                <option selected>Choose crust</option>
+                                                <option id="crispy" value="120">Crispy @120</option>
+                                                <option id="stuffed" value="100">Stuffed @100</option>
+                                                <option id="glutten" value="80">Glutten free @80</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="toppings">
+                                        <p>Select toppings @ ksh50 each:</p>
+                                        <div class="toppings-check">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="50" id="sausage">
+                                                <label class="form-check-label" for="flexCheckDefault">
+                                                    Sausage
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="50" id="bacon">
+                                                <label class="form-check-label" for="flexCheckChecked">
+                                                    Mashroom
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="50" id="soft">
+                                                <label class="form-check-label" for="flexCheckChecked">
+                                                    Anchovies
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="50" id="soft">
+                                                <label class="form-check-label" for="flexCheckChecked">
+                                                    Radicchio
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button id="btn6" type="button">Confirm</button>
+                                </div>
+                                <!--popup's close button-->
+                                <button class="close5">Close</button>
+                            </div>
+                        </div>
+                        <!--Content shown when popup is not displayed-->
+
+                        <button class="open5">Order</button>
+
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -101,6 +558,9 @@
     <script src="https://code.jquery.com/jquery-3.6.0.js"
         integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
     <script src="index.js"></script>
+    <script src="cart.js"></script>
 </body>
+
+</div>
 
 </html>
