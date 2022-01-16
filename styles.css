@@ -141,6 +141,8 @@ img {
     width: 160%;
     height: 120%;
     left: 25%;
+    top: 0;
+    z-index: 999;
 
 }
 
