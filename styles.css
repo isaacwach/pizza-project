@@ -15,11 +15,12 @@
 
 #header2 {
     height: 350px;
-    width: 100%;
+    width: 80%;
     position: relative;
     top: 180px;
-    left: 100px;
+    left: 150px;
     border-top-left-radius: 100%;
+    margin-right: 0;
 }
 
 #introduction {
@@ -38,14 +39,14 @@
 }
 
 .paragraph {
-    color: #f5bf10;
+    color: #f58a10;
 }
 
 #btn1 {
     margin-top: 20px;
     width: 180px;
     height: 60px;
-    background-color: rgb(240, 160, 13);
+    background-color: black;
     font-size: 20px;
     color: white;
     border: 2px solid blue;
