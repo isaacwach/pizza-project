@@ -188,7 +188,7 @@ button {
     width: 120px;
     height: 40px;
     background-color: black;
-    margin-top: 30px;
+    margin-top: 20px;
 }
 
 .toppings {
@@ -237,10 +237,27 @@ button {
     margin-top: 40px;
 }
 
+
 .order-header h3 {
-    font-size: 55px;
     font-weight: bold;
     margin-top: 50px;
+    font-size: 55px;
+    background: -webkit-linear-gradient(rgb(221, 29, 61), rgb(245, 133, 4));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation-name: textzoom;
+    animation-duration: 3s;
+    animation-timing-function: repeat;
+    animation-iteration-count: infinite;
+}
+
+@keyframes textzoom {
+    0%{
+        font-size:28px;
+    }
+    100%{
+        font-size: 65px;
+    }
 }
 .output{
     margin-top: 40px;
