@@ -2,7 +2,7 @@
 ## By Isaac Wachira
 ## Description
 This project is a pizza in application. A customer can loggon to the application, select the type of pizza they want, size, crust and topp;ings of preference. The application displays the order details as well as the total price to be paid. 
-![Landing page picture](https://github.com/isaacwach/delai-studio/blob/master/images/delanihome.png)
+![Landing page photo](https://github.com/isaacwach/pizza-project/blob/master/images/pizzaweb.png)
 ## Author information
 I am a full stack developer, with impeccable skills in web development, UI design, and problem solving skills using algorithms. Besides, i have knowlege in enterprise development, financial accounting and business management.
 ## Setup/Installation Requirements
