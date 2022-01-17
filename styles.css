@@ -138,9 +138,9 @@ img {
     position: absolute;
     background: #ffffff;
     border: 3px solid #666666;
-    width: 160%;
+    width: 150%;
     height: 120%;
-    left: 25%;
+    left: 0%;
     top: 0;
     z-index: 999;
 
@@ -188,6 +188,7 @@ button {
     width: 120px;
     height: 40px;
     background-color: black;
+    margin-top: 30px;
 }
 
 .toppings {
