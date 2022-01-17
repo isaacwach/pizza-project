@@ -214,6 +214,13 @@ button {
     padding-left: 180px;
     padding-right: 100px;
 }
+#total-order-cost{
+    font-size: 22px;
+}
+.radio-form{
+    font-size: 22px;
+}
+
 
 .order-header {
     background-image: url("https://images.unsplash.com/photo-1440637475816-2e8bf1d4b6f3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTZ8fHBpenphJTIwZ2lmfGVufDB8MHwwfHw%3D&auto=format&fit=crop&w=500&q=60");
