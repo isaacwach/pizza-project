@@ -218,6 +218,10 @@ function finalOutput() {
         var delivery = $('input[name=radioName]:checked', '#myForm').val();
         if (delivery === "yes") {
             deliveryCost = 200
+        } else if (delivery === "no") {
+            deliveryCost =0
+        } else {
+            return false;
         }
     });
 
@@ -225,5 +229,6 @@ function finalOutput() {
         $("#total-order-cost").empty()
         $("#total-order-cost").append('<br>' + '<br>' + "------------" + '<br>' + "Your total order so far is: " + (cart.totalOrderCost() + deliveryCost) + '<br>');
         $(".radio-form").empty();
+        alert("Thank you for shopping with us. You will pay a total of: Ksh" + (cart.totalOrderCost() + deliveryCost))
     })
 }
